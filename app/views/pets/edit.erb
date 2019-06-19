@@ -6,7 +6,11 @@
 
   <br>
 
+<<<<<<< HEAD
   <input type="text" name="pet[name]" id="pet_name" value="<%=@pet.name%>">
+=======
+  <input type="text" name="pet[name]" id="pet" value="<%=@pet.name%>">
+>>>>>>> 5f30d6edfe2f52536c14d06f55973422d3bd2afe
 
   <br>
 
@@ -15,7 +19,11 @@
   <br>
 
   <%@owners.each do |owner|%>
+<<<<<<< HEAD
     <input type="radio" name="pet[owner_id]" id="<%= owner.id%>" value="<%=owner.id%>" <%='checked' if @pet.owner_id == owner.id %>><%=owner.name%></input>
+=======
+    <input type="checkbox" name="pet[owner_ids][]" id="<%= owner.id%>" value="<%=owner.id%>" <%='checked' if @pet.owner.include?(owner) %>><%=owner.name%></input>
+>>>>>>> 5f30d6edfe2f52536c14d06f55973422d3bd2afe
   <%end%>
 
   <br>
@@ -25,5 +33,9 @@
   <label>name:</label>
     <input  type="text" name="owner[name]" id="owner_name"></input>
   <br>
+<<<<<<< HEAD
   <input type="submit" value="Update Pet" id="update_pet">
+=======
+  <input type="submit" value="Update Pet">
+>>>>>>> 5f30d6edfe2f52536c14d06f55973422d3bd2afe
 </form>
